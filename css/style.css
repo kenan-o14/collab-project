@@ -16,3 +16,14 @@ display: flex;
     border: 4px solid blue;
     background-color: red;
 }
+
+.containerthree {
+    display: flex;
+
+}
+
+.containerthree div {
+    height: 50px;
+    border: 2px solid blue;
+    flex: 1;
+}
