@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website layout</title>
+    <title>Welcome to IRA</title>
     <link rel="stylesheet" href="css/style.css"
 </head>
 <!DOCTYPE html>
@@ -16,89 +16,299 @@
   <title>Responsive Navigation Bar</title>
   <!-- Add Bootstrap CSS link -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Link to your custom CSS file -->
+  <link rel="stylesheet" href="/css/style.css">
+
   <style>
-    /* Add custom styles here if needed */
-    .logo {
-      height: 50px; /* Adjust the height as needed */
-      margin-right: 15px;
+    /* Custom style for the chat button */
+    .fixed-chat-button {
+      position: fixed;
+      bottom: 10px;
+      color: #0B1152;
+      right: 10px;
+      box-shadow: 0 0px 5px rgba(0, 0, 0, 0.2); /* Add the box shadow */
     }
 
-    .title-container {
+    /* Custom style for the chat window */
+    .chat-window {
+      position: fixed;
+      bottom: 80px;
+      right: 10px;
+      width: 300px;
+      height: 400px;
+      background-color: #f5f5f5;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 10px;
+      display: none;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    .chat-window.show {
+      display: block;
+      opacity: 1;
+    }
+   
+     /* Custom style for the footer */
+    footer {
+      background-color: #0B1152;
+      color: #fff;
+      padding: 20px 0;
       text-align: center;
     }
 
-    .title {
-      font-size: 24px;
-      font-weight: bold;
-      margin-bottom: 5px;
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
     }
 
-    .subtitle {
-      font-size: 14px;
+    .footer-section {
+      margin-bottom: 20px;
     }
+
+    .footer-section h4 {
+      color: #fff;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .footer-section p {
+      color: #ccc;
+      margin: 0;
+    }
+
+    .footer-icons {
+      margin-top: 15px;
+    }
+
+    .footer-icons a {
+      display: inline-block;
+      margin-right: 10px;
+    }
+
+    .footer-icons img {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+    }
+
+    /* Custom style for the footer bottom */
+    .footer-bottom {
+      margin-top: 40px;
+      width: 100%;
+    }
+
+    .footer-bottom p {
+      margin: 0;
+    }
+
+    .navbar {
+      background-image: linear-gradient(#a075c5, #ffff);
+      padding: 10px;
+      box-shadow: 0 0px 4px rgba(0, 0, 0, 0.2); /* Add the box shadow */
+    
+    }
+
+    .navbar-brand {
+      font-size: 24px;
+      font-weight: bold;
+      color: #fff;
+      font-family: 'courier new', monospace;
+    }
+    .navbar-brand,
+    .navbar-nav .nav-link {
+      color: black;
+    }
+
+    .navbar-brand:hover,
+    .navbar-nav .nav-link:hover {
+      color: #8653af;
+    }
+
+    .navbar-item {
+      color: black;
+    }
+
+    /* Custom style for the hero section */
+    .hero {
+      background-color: #A075C5;
+      padding: 100px 0;
+      text-align: center;
+      background-image: url(/img/s2-1903x500.jpg);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add the box shadow */
+    }
+
+    .hero-title {
+      font-size: 48px;
+      /* font-weight: bold; */
+      font-family: 100% Helvetica, sans-serif;
+      color: black;
+      margin-bottom: 20px;
+      /* text-shadow: 2px 2px #a075c5; */
+    }
+
+    .hero-subtitle {
+      font-size: 24px;
+      font-family: 100% Helvetica, sans-serif;
+      color: black;
+      margin-bottom: 40px;
+    }
+
+    .welcome {
+      box-shadow: 4px 2px 4px rgba(0, 0, 0, 0.2); /* Add the box shadow */
+    }
+    .title {
+      color: #0B1152;
+    }
+    .subtitle {
+      color: #0B1152
+    }
+
+    .main-content {
+      background-image: linear-gradient(white, #a075c5);
+      padding: 20px;
+      border-radius: 50px;
+      margin-top: 40px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add the box shadow */
+      color: black;
+      line-height: 1.6;
+      font-size: large;
+    }
+
+    .content-title {
+      color: black;
+      font-size: 40px;
+      /* font-weight: bold; */
+      margin-bottom: 20px;
+      font-family: 100% Helvetica, sans-serif;
+      text-align: center;
+      /* text-shadow: 2px 2px #a075c5; */
+    }
+    .title
+
+    /* Custom style for the horizontal line */
+    .separator {
+      width: 100%;
+      border: none;
+      height: 1px;
+      background-color: #784CA2;
+      margin: 40px 0;
+    }
+
+    .carousel-inner {
+      box-shadow: 0 0px 4px rgba(0, 0, 0, 0.2); /* Add the box shadow */
+    }
+
+    .header1 {
+      text-align: center;
+      font-size: 28px;
+      font-family: 100% Helvetica, sans-serif;
+      /* font-weight: bold; */
+      background-image: linear-gradient( to bottom right, #a075c5, #ffff);
+      padding: 20px;
+      border-radius: 1px;
+      color: black;
+      /* text-shadow: 2px 2px #a075c5; */
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add the box shadow */
+    }
+
+    .header2 {
+      text-align: center;
+      font-size: 28px;
+      /* font-weight: bold; */
+      font-family: 100% Helvetica, sans-serif;
+      background-image: linear-gradient(#a075c5, #ffff);
+      padding: 20px;
+      border-radius: 1px;
+      margin-top: 30px;
+      color: black;
+      /* text-shadow: 2px 2px #a075c5; */
+    }
+    .carousel-item {
+      flex: 1;
+      text-align: center;
+    }
+    
+    .blog-card-title2 {
+      font-size: 49px;
+      font-weight: bold;
+      color: white;
+      text-shadow: 1px 2px black;
+      margin-bottom: 10px;
+      font-family: Georgia, serif;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add the box shadow */
   </style>
+
+
+
 </head>
 
 <body>
 
-  <!-- Logo and Title -->
-  <div class="container-fluid bg-light p-3">
-    <div class="row">
-      <div class="col-4">
+  <!-- <div class="welcome"> -->
+    <!-- <div class="row"> -->
+      <!-- <div class="col-4"> -->
         <!-- Add your logo here -->
-        <img class="logo" src="path/to/your/logo.png" alt="Your Logo">
+        <img class="logo" src="/img/IRA_PHC.png" alt="Your Logo">
       </div>
-      <div class="col-4 title-container">
-        <div class="title">IRA</div>
-        <div class="subtitle">Healthy body, Healthy planet</div>
+      <!-- <div class="col-4 title-container"> -->
+        <div class="title"></div>
+        <div class="subtitle"></div>
       </div>
     </div>
   </div>
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+  <!-- Logo and Title -->
+  <nav class="navbar navbar-expand-lg">
     <div class="container">
-      <!-- Brand/logo -->
-      <a class="navbar-brand" href="#">Your Brand</a>
-
-      <!-- Toggler/collapsible Button -->
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <!-- Brand Name -->
+      <a class="navbar-brand" href="index.html">IRA</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/pages/about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Shop</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">TGF</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/pages/blog2.html">Health Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/pages/login.html">Login/Sign up</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">My Period</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">My Cart</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">My Subscription</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-            <!-- Navbar links -->
-            <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                <ul class="navbar-nav ml-auto">
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Shop</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">TGF</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Health Blog</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Login/Sign up</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">My Period</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">My Cart</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">My Subscription</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </nav>
-        
-        
+  <!-- Hero Section -->
+  <div class="hero">
+    <div class="container">
+      <h1 class="hero-title">Welcome to IRA</h1>
+      <p class="hero-subtitle">Healthy Body, Healthy Planet</p>
+      <!-- Add any additional content here, such as buttons, call-to-action, etc. -->
+    </div>
+  </div>
 
       <!-- Navbar links -->
       <div class="collapse navbar-collapse" id="collapsibleNavbar">
@@ -108,6 +318,168 @@
       </div>
     </div>
   </nav>
+  <div class="header1"> 
+    <h2>Our Mission & Vision</h2>
+  </div>
+  <!-- <div class="container mt-4"> -->
+    <!-- <div class="row"> -->
+      <!-- <div class="container mt-4 text-center"> -->
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Horizontal Line / Separator -->
+       
+        
+        <div class="carousel-inner">
+          <div class="carousel-text">
+          </div>
+          <div class="carousel-item active">
+            <a href="/pages/about.html">
+              <img src="/img/slideshow.jpg" alt="Image 1" style="height: 500px; object-fit: cover;">
+              <div class="carousel-caption">
+                <h2 class="blog-card-title2">At IRA, our mission is twofold - to provide women with the highest quality organic sanitary products that promote health and well-being, and to create a better future for all through our charitable initiatives...(Read more)</h2>
+              </div>
+            </a>
+          </div>
+          <div class="carousel-item">
+            <a href="/pages/about.html">
+              <img src="/img/slideshow2.jpg" alt="Image 2" style="height: 500px; object-fit: cover;">
+              <div class="carousel-caption">
+                <h2 class="blog-card-title2">A Beginner's Guide to Buying Houses</h2>
+              </div>
+            </a>
+          </div>
+          <div class="carousel-item">
+            <a href="/pages/about.html">
+              <img src="/img/slideshow3.jpg" alt="Image 3" style="height: 500px; object-fit: cover;">
+              <div class="carousel-caption">
+                <h2 class="blog-card-title2">Here, menstrual care meets compassion. We are not just a brand; we are a movement dedicated to revolutionizing the way women experience their periods while making a positive impact on the world. IRA takes...(Read more)</h2>
+              </div>
+            </a>
+          </div>
+        </div>
+    
+        <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#myCarousel" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </a>
+      </div>
+
+
+  <!-- Content Section 3 -->
+  <div class="main-content" style="height: px;
+    <div class="row">
+      <div class="col-md-12 mb-4">
+        <h1 class="content-title">Why us?</h1>
+        <p>IRA values its customers and its partners, but there are a special few stakeholders we do not forget to value. We take our responsibility to 
+          the environment seriously. That's why all
+           our products are crafted with love and care, using organic and biodegradable materials that are gentle on both your body and the planet.</p>
+      </div>
+    </div>
+  </div>
+  <div></div>
+  
+  <!-- Image Slider 2 -->
+  <!-- <div class="container mt-4 text-center"></div> -->
+  <div class="header2">
+    <h2>Products</h2> </div>
+  <!-- Carousel Section -->
+          
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <!-- Add more indicators if needed for additional images -->
+    </ol>
+
+    <!-- Slides -->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <a href="https://example.com/link1">
+          <img src="/img/slideshow3.jpg" alt="Image 1"style="height: 500px; object-fit: cover;">
+          <div class="carousel-caption">
+            <h2 class="blog-card-title2">An Introduction to Travel</h2>
+          </div>
+        </a>
+      </div>
+      <div class="carousel-item">
+        <a href="https://example.com/link2">
+          <img src="/img/slideshow.jpg" alt="Image 2" style="height: 500px; object-fit: cover; ">
+          <div class="carousel-caption">
+            <h2 class="blog-card-title2">A Beginner's Guide to Buying Houses</h2>
+          </div>
+        </a>
+      </div>
+      <div class="carousel-item">
+        <a href="https://example.com/link3">
+          <img src="/img/slideshow2.jpg" alt="Image 3" style="height: 500px; object-fit: cover;">
+          <div class="carousel-caption">
+            <h2 class="blog-card-title2">10 facts you didnt know about soccer</h2>
+          </div>
+        </a>
+      </div>
+      <!-- Add more carousel items with links and images -->
+    </div>
+
+    <!-- Controls -->
+    <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+</div>
+
+  <!-- Chat Button -->
+  <div class="fixed-chat-button">
+    <button type="button" class="btn btn-primary" onclick="toggleChat()">IRA BOT</button>
+  </div>
+
+  
+
+  <!-- Gap between Image Slider and Footer -->
+  <div style="height: 40px;"></div>
+
+
+  <!-- Contact Us Section -->
+  <footer>
+    <div class="container" style="max-width: 4000px;"> <!-- Adjust the maximum width as needed -->
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>Contact Us</h4>
+          <p>Email: contact@example.com</p>
+          <p>Phone: +1 (123) 456-7890</p>
+        </div>
+        <div class="footer-section">
+          <div class="footer-icons">
+            <a href="#"><img src="/img/734386_facebook_media_online_social_icon222.png" alt="Facebook"></a>
+            <a href="#"><img src="/img/instagram2.png" alt="Twitter"></a>
+            <a href="#"><img src="/img/734395_instagram_media_online_photo_social_icontwww.png" alt="Instagram"></a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h4>About Us</h4>
+          <a href="/pages/blog.html">Blog</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; Copyright 2023 IRA <br>All rights reserved. | <a href="privacy-policy.html">Privacy Policy</a></p>
+      </div>
+    </div>
+  </footer>
+
 
   <!-- Page content goes here -->
 
@@ -115,6 +487,25 @@
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <!-- Custom JavaScript to toggle the chat window -->
+  <script>
+    function toggleChat() {
+      var chatWindow = document.getElementById('chatWindow');
+      if (chatWindow.style.display === 'block') {
+        chatWindow.style.display = 'none';
+      } else {
+        chatWindow.style.display = 'block';
+      }
+    }
+  </script>
+
+<script>
+  // Change the interval time (in milliseconds)
+  $('.carousel').carousel({
+    interval: 5000 // Set to 8 seconds (8000 ms)
+  });
+</script>
 
 </body>
 

@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IRA BLOG| Home</title>
+  <!-- Add Bootstrap CSS link -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Link to your custom CSS file -->
+  <link rel="stylesheet" href="/css/style.css">
+  <!-- ... (rest of your head section) ... -->
+  <style>
+    /* ... (rest of your existing styles) ... */
+    body {
+    background-color: #fff;
+     }
+    /* Custom style for the navigation bar */
+    .navbar {
+    background-image: linear-gradient(#a075c5, #ffff);
+      padding: 10px;
+      padding: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add the box shadow */
+    }
+
+    .navbar-brand {
+      font-size: 24px;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    .navbar-item {
+      color: #fff;
+    }
+    .navbar-brand,
+    .navbar-nav .nav-link {
+      color: black;
+    }
+
+    .navbar-brand:hover,
+    .navbar-nav .nav-link:hover {
+      color: #8653af;
+    }
+
+    .navbar-item {
+      color: black;
+    }
+
+    /* Custom style for the hero section */
+    .hero {
+      background-image: linear-gradient(#ffff, #8653af );
+      padding: 15px 0;
+      text-align: center;
+      font-family: 100% Helvetica, sans-serif;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add the box shadow */
+    }
+
+    .hero-title {
+      font-size: 48px;
+      color: black;
+      margin-bottom: 20px;
+    }
+
+    .hero-subtitle {
+      font-size: 24px;
+      color: black;
+      margin-bottom: 40px;
+    }
+
+    /* Custom style for blog post cards */
+    .blog-card {
+      /* background-color: #fff;/ */
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+      padding: 20px;
+      margin-bottom: 30px;
+    }
+
+    .blog-card-title {
+      font-size: 23px;
+      font-weight: bold;
+      color: white
+      margin-bottom: 10px;
+    }
+
+    .blog-card-image {
+      display: block;
+      width: 100%;
+      border-radius: 6px;
+      margin-bottom: 15px;
+      position: relative;
+      max-height: 300px;
+      object-fit: cover;
+    }
+
+    .blog-card-content {
+      font-size: 16px;
+      color: rgb(180, 178, 178);
+      font-family: Helvetica, sans-serif;
+      /* text-align: justify; */
+    }
+
+    /* Custom style for the blog post read more button */
+    .read-more-button {
+        background-color: grey;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add the box shadow */
+      border: none;
+      border-radius: 4px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .read-more-button:hover {
+      background-color: #784CA2;
+    }
+
+    .blog-card-title2 {
+      font-size: 49px;
+      font-weight: bold;
+      color: white;
+      text-shadow: 2px 2px black;
+      margin-bottom: 10px;
+      font-family: Georgia, serif;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add the box shadow */
+
+    }
+
+    .carousel-inner {
+      box-shadow: 0 0px 4px rgba(0, 0, 0, 0.2); /* Add the box shadow */
+      background-color: #333;
+    }
+    
+    .icons {
+        float: left;
+    }
+    .icons img {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+    }
+
+    /* ... (rest of your custom styles) ... */
+    
+
+    .blog-card-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      border-radius: 6px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .blog-card-overlay h2,
+    .blog-card-overlay .read-more-button {
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+    }
+
+    .blog-card-overlay .read-more-button {
+      background-color ;
+      border: none;
+      border-radius: 4px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .blog-card-image:hover .blog-card-overlay {
+      opacity: 1;
+    }
+
+    /* Custom style for the search bar */
+    .search-bar-container {
+      display: flex;
+      align-items: center;
+      max-width: 300px;
+      background-color: #fff;
+      border-radius: 20px;
+      padding: 5px 10px;
+    }
+
+    .search-input {
+      flex: 1;
+      border: none;
+      outline: none;
+      font-size: 16px;
+      color: #333;
+    }
+
+    .search-button {
+      background-color: #A075C5;
+      border: none;
+      border-radius: 20px;
+      color: #fff;
+      padding: 8px 16px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .search-button:hover {
+      background-color: #784CA2;
+    }
+
+    .blog-link  {
+        color: black;
+    }
+
+    .blog-link :hover{
+        color: gray;
+        
+       
+    }
+
+    a{
+        text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <!-- Brand Name -->
+      <a class="navbar-brand" href="index.html">IRA</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Shop</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">TGF</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="blog.html">Health Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Login/Sign up</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">My Period</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">My Cart</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">My Subscription</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="search-bar-container">
+      <input type="text" class="search-input" placeholder="Search...">
+      <button class="search-button">Search</button>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <div class="icons">
+      <a href="#"><img src="/img/734386_facebook_media_online_social_icon222.png" alt="Facebook"></a>
+      <a href="#"><img src="/img/instagram2.png" alt="Twitter"></a>
+      <a href="#"><img src="/img/734395_instagram_media_online_photo_social_icontwww.png" alt="Instagram"></a>
+    </div>
+  <div class="hero">
+      <div class="container">
+          <h1 class="hero-title">IRA Blog</h1>
+          <p class="hero-subtitle">Explore our latest health and wellness articles</p>
+          <!-- Carousel Section -->
+          
+          <div id="myCarousel" class="carousel slide" data-ride="carousel">
+              <!-- Indicators -->
+            <ol class="carousel-indicators">
+              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#myCarousel" data-slide-to="1"></li>
+              <li data-target="#myCarousel" data-slide-to="2"></li>
+              <!-- Add more indicators if needed for additional images -->
+            </ol>
+        
+            <!-- Slides -->
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <a href="/pages/blogpost.html">
+                  <img src="/img/Sustainability-Influencers-in-Canada-1920x1080-1.jpg" alt="Image 1"style="height: 500px; object-fit: cover;">
+                  <div class="carousel-caption">
+                    <h2 class="blog-card-title2">Staining Sustainability</h2>
+                  </div>
+                </a>
+              </div>
+              <div class="carousel-item">
+                <a href="/pages/blogposttwo.html">
+                  <img src="/img/Empowering-Women_Header-01.jpeg" alt="Image 2" style="height: 500px; object-fit: cover; ">
+                  <div class="carousel-caption">
+                    <h2 class="blog-card-title2">Give her a ‘pad’ on the back: Empowering young women in rural areas one pad at a time</h2>
+                  </div>
+                </a>
+              </div>
+              <div class="carousel-item">
+                <a href="/pages/blogpost3.html">
+                  <img src="/img/world-environment.jpeg" alt="Image 3" style="height: 500px; object-fit: cover;">
+                  <div class="carousel-caption">
+                    <h2 class="blog-card-title2">Back to Nature: Unveiling the secret benefits of organic pads</h2>
+                  </div>
+                </a>
+              </div>
+              <!-- Add more carousel items with links and images -->
+            </div>
+        
+            <!-- Controls -->
+            <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+      </div>
+    </div>
+                   <!-- Blog Post Section -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-md-6">
+        <div class="blog-card">
+            <div class="blog-card-image">
+                <a class="blog-link" href="/pages/blogpost.html">      
+                    <img class="blog-card-image" src="/img/Sustainability-Influencers-in-Canada-1920x1080-1.jpg" alt="Blog Post Image">
+                    <div class="blog-card-overlay">
+                        <h2 class="blog-card-title">Staining Sustainably</h2>
+                        <button class="read-more-button">VIEW POST</button>
+                    </div>
+                </div>
+                <h2 class="blog-card-title">Staining Sustainably</h2>
+            </a>
+          <p class="blog-card-content">Some things possess an unquestionable purpose and essence, bound by the laws of nature. Some things…simply need to happen…like a woman’s
+             monthly menstrual cycle...</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="blog-card">
+            <div class="blog-card-image">
+                <a class="blog-link" href="/pages/blogposttwo.html">
+                <img class="blog-card-image" src="/img/Empowering-Women_Header-01.jpeg" alt="Blog Post Image">
+                <div class="blog-card-overlay">
+                    <h2 class="blog-card-title">Give her a ‘pad’ on the back: Empowering young women in rural areas one pad at a time</h2>
+                    <button class="read-more-button">VIEW POST</button>
+                </div>
+            </div>
+            <h2 class="blog-card-title">Give her a ‘pad’ on the back: Empowering young women in rural areas one pad at a time</h2>
+        </a>
+            <p class="blog-card-content">While half the population of the world bleeds on a monthly basis, it isn’t fair that a few
+                 have to resort to old clothes and rags to manage being a woman...</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="blog-card">
+            <div class="blog-card-image">
+                <a class="blog-link" href="/pages/blogpost3.html">
+                <img class="blog-card-image" src="/img/world-environment.jpeg" alt="Blog Post Image">
+                <div class="blog-card-overlay"> 
+                    <h2 class="blog-card-title">Back to Nature: Unveiling the secret benefits of organic pads</h2>
+                    <button class="read-more-button">VIEW POST</button>
+                </div>
+                </div>
+                <h2 class="blog-card-title">Back to Nature: Unveiling the secret benefits of organic pads</h2>
+            </a>
+                <p class="blog-card-content">A woman is vital in society. She leads and nurtures, learns and creates,
+                     teaches and follows. But in order to gracefully dance between her multifaceted roles she needs to be healthy...</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+         <!-- Blog Post Section -->
+                         <!-- Blog Post Section -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-md-6">
+        <div class="blog-card">
+            <div class="blog-card-image">
+                <a class="blog-link" href="/index.html">
+                <img class="blog-card-image" src="/img/pinterest1.jpeg" alt="Blog Post Image">
+                <div class="blog-card-overlay">
+                    <h2 class="blog-card-title">Incorporating Self-Care during Menstruation</h2>
+                    <button class="read-more-button">VIEW POST</button>
+                </div>
+            </div>
+            <h2 class="blog-card-title">Incorporating Self-Care during Menstruation</h2>
+        </a>
+          <p class="blog-card-content">Menstruation is a natural and powerful aspect of womanhood, 
+            representing the body's ability to create life. While the monthly cycle for most women are 
+            accompanied by constant discomfort</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="blog-card">
+            <div class="blog-card-image">
+                <a class="blog-link" href="/index.html">
+                <img class="blog-card-image" src="/img/pinterest2.jpg" alt="Blog Post Image">
+                <div class="blog-card-overlay">
+                    <h2 class="blog-card-title">Eco-Friendly Period Hacks and Tips</h2>
+                    <button class="read-more-button">VIEW POST</button>
+                </div>
+            </div>
+            <h2 class="blog-card-title">Eco-Friendly Period Hacks and Tips</h2>
+        </a>
+            <p class="blog-card-content">With more and more people becoming aware of the effects of our modern
+                 lifestyle on the environment, menstruation is often brought up into discussion...</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="blog-card">
+            <div class="blog-card-image">
+                <a class="blog-link" href="/index.html">
+                <img class="blog-card-image" src="/img/pinterest3.jpg" alt="Blog Post Image">
+                <div class="blog-card-overlay"> 
+                    <h2 class="blog-card-title">The Eco-Friendly Odyssey: The Journey of an Organic Sanitary Napkin</h2>
+                    <button class="read-more-button">VIEW POST</button>
+                </div>
+                </div>
+                <h2 class="blog-card-title">The Eco-Friendly Odyssey: The Journey of an Organic Sanitary Napkin</h2>
+            </a>
+                <p class="blog-card-content">Natural & organic products are all the craze right now. But, how exactly 
+                    are they made? How different are they really, from the conventional products that are known to be...</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+                 <!-- Blog Post Section -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-md-6">
+        <div class="blog-card">
+            <div class="blog-card-image">
+                <a class="blog-link" href="/index.html">
+                <img class="blog-card-image" src="/img/pinterest1.jpeg" alt="Blog Post Image">
+                <div class="blog-card-overlay">
+                    <h2 class="blog-card-title">Busting Myths: Separating Fact from Fiction about Organic Sanitary Napkins</h2>
+                    <button class="read-more-button">VIEW POST</button>
+                </div>
+            </div>
+            <h2 class="blog-card-title">Busting Myths: Separating Fact from Fiction about Organic Sanitary Napkins</h2>
+        </a>
+          <p class="blog-card-content">In the context of menstrual hygiene, a plethora of myths and misconceptions cast a shadow on the truth about organic sanitary napkins...</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="blog-card">
+            <div class="blog-card-image">
+                <a class="blog-link" href="/index.html">
+                <img class="blog-card-image" src="/img/pinterest2.jpg" alt="Blog Post Image">
+                <div class="blog-card-overlay">
+                    <h2 class="blog-card-title">Weighing the Options: Organic Menstrual Products - Pads vs. Period Underwear vs. Cups vs. Tampons</h2>
+                    <button class="read-more-button">VIEW POST</button>
+                </div>
+            </div>
+            <h2 class="blog-card-title">Weighing the Options: Organic Menstrual Products - Pads vs. Period Underwear vs. Cups vs. Tampons</h2>
+        </a>
+            <p class="blog-card-content">In the ever-evolving world of menstrual products, women now have a wide array of choices to cater to their individual needs and preferences...</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="blog-card">
+            <div class="blog-card-image">
+                <a class="blog-link" href="/index.html">
+                <img class="blog-card-image" src="/img/pinterest3.jpg" alt="Blog Post Image">
+                <div class="blog-card-overlay"> 
+                    <h2 class="blog-card-title">A Revolution in Feminine Hygiene: The Journey through the history of Sanitary Products</h2>
+                    <button class="read-more-button">VIEW POST</button>
+                </div>
+                </div>
+                <h2 class="blog-card-title">A Revolution in Feminine Hygiene: The Journey through the history of Sanitary Products</h2>
+            </a>
+                <p class="blog-card-content">In the not-so-distant past, the world of feminine hygiene was dominated by conventional pads and tampons, 
+                    often laden with synthetic materials and harmful chemicals...</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-md-6">
+        <div class="blog-card">
+          <div class="blog-card-image">
+            <a href="/index.html">
+            <img src="/img/pinterest1.jpeg" alt="Blog Post Image">
+            <div class="blog-card-overlay">
+              <h3>Title of Blog Post 1</h3>
+              <button class="read-more-button">Read More</button>
+            </div>
+          </div>
+          <div class="blog-card-content">
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+              placerat dui eu tellus elementum, vel fringilla nulla accumsan.
+              Cras vel hendrerit erat.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Add more blog cards with the same structure -->
+    </div>
+  </div>
+
+  <!-- Add Bootstrap JS and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <!-- ... (rest of your body section) ... -->
+  <script>
+    // Change the interval time (in milliseconds)
+    $('.carousel').carousel({
+      interval: 5000 // Set to 8 seconds (8000 ms)
+    });
+  </script>
+
+
+
+<script>
+    // Get the elements for the search bar and blog post cards
+    const searchInput = document.querySelector('.search-input');
+    const searchButton = document.querySelector('.search-button');
+    const blogCards = document.querySelectorAll('.blog-card');
+
+    // Example data for the blog posts (you can replace this with your data)
+    const blogPosts = [
+      {
+        title: 'Staining Sustainability',
+        content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc placerat dui eu tellus...',
+      },
+     
+      {
+        title: 'give her a pad',
+        content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc placerat dui eu tellus...',
+      },
+      
+      {
+        title: 'back to nature',
+        content: 'A woman is vital in society. She leads and nurtures, learns and creates, teaches and follows. But in order to gracefully dance between her multifaceted roles she needs to be healthy',
+      },
+      
+      {
+        title: 'A Revolution in Feminine Hygiene: The Journey through the history of Sanitary Products',
+        content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc placerat dui eu tellus...',
+      },
+      // Add more blog posts as needed
+    ];
+
+    // Add an event listener to the search button
+    searchButton.addEventListener('click', () => {
+      // Get the search query from the input
+      const searchQuery = searchInput.value.trim().toLowerCase();
+
+      // Filter blog posts based on the search query
+      const filteredPosts = blogPosts.filter(post =>
+        post.title.toLowerCase().includes(searchQuery) ||
+        post.content.toLowerCase().includes(searchQuery)
+      );
+
+      // Display the filtered blog posts
+      blogCards.forEach((card, index) => {
+        if (filteredPosts.includes(blogPosts[index])) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      // Clear the search input after performing the search (optional)
+      searchInput.value = '';
+    });
+  </script>
+
+</body>
+
+</html>

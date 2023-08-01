@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IRA BLOG| Home</title>
+  <!-- Add Bootstrap CSS link -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Link to your custom CSS file -->
+  <link rel="stylesheet" href="/css/style.css">
+  <!-- ... (rest of your head section) ... -->
+  <style>
+    /* ... (rest of your existing styles) ... */
+    body {
+    background-color: #fff;
+     }
+    /* Custom style for the navigation bar */
+    .navbar {
+    background-image: linear-gradient(#a075c5, #ffff);
+      padding: 10px;
+      padding: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add the box shadow */
+    }
+
+    .navbar-brand {
+      font-size: 24px;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    .navbar-item {
+      color: #fff;
+    }
+    .navbar-brand,
+    .navbar-nav .nav-link {
+      color: black;
+    }
+
+    .navbar-brand:hover,
+    .navbar-nav .nav-link:hover {
+      color: #8653af;
+    }
+
+    .navbar-item {
+      color: black;
+    }
+
+    /* Custom style for the hero section */
+    .hero {
+      background-image: linear-gradient(#ffff, #8653af );
+      padding: 15px 0;
+      text-align: center;
+      font-family: 100% Helvetica, sans-serif;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add the box shadow */
+    }
+
+    .hero-title {
+      font-size: 48px;
+      color: black;
+      margin-bottom: 20px;
+    }
+
+    .hero-subtitle {
+      font-size: 24px;
+      color: black;
+      margin-bottom: 40px;
+    }
+
+    /* Custom style for blog post cards */
+    .blog-card {
+      /* background-color: #fff;/ */
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+      padding: 20px;
+      margin-bottom: 30px;
+    }
+
+    .blog-card-title {
+      font-size: 23px;
+      font-weight: bold;
+      color: white
+      margin-bottom: 10px;
+    }
+
+    .blog-card-image {
+      display: block;
+      width: 100%;
+      border-radius: 6px;
+      margin-bottom: 15px;
+      position: relative;
+      max-height: 300px;
+      object-fit: cover;
+    }
+
+    .blog-card-content {
+      font-size: 16px;
+      color: rgb(180, 178, 178);
+      font-family: Helvetica, sans-serif;
+      /* text-align: justify; */
+    }
+
+    /* Custom style for the blog post read more button */
+    .read-more-button {
+        background-color: grey;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add the box shadow */
+      border: none;
+      border-radius: 4px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .read-more-button:hover {
+      background-color: #784CA2;
+    }
+
+    .blog-card-title2 {
+      font-size: 49px;
+      font-weight: bold;
+      color: white;
+      text-shadow: 2px 2px black;
+      margin-bottom: 10px;
+      font-family: Georgia, serif;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add the box shadow */
+
+    }
+
+    .carousel-inner {
+      box-shadow: 0 0px 4px rgba(0, 0, 0, 0.2); /* Add the box shadow */
+    }
+    
+    .icons {
+        float: left;
+    }
+    .icons img {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+    }
+
+    /* ... (rest of your custom styles) ... */
+    
+
+    .blog-card-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      border-radius: 6px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .blog-card-overlay h2,
+    .blog-card-overlay .read-more-button {
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+    }
+
+    .blog-card-overlay .read-more-button {
+      background-color ;
+      border: none;
+      border-radius: 4px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .blog-card-image:hover .blog-card-overlay {
+      opacity: 1;
+    }
+
+    /* Custom style for the search bar */
+    .search-bar-container {
+      display: flex;
+      align-items: center;
+      max-width: 300px;
+      background-color: #fff;
+      border-radius: 20px;
+      padding: 5px 10px;
+    }
+
+    .search-input {
+      flex: 1;
+      border: none;
+      outline: none;
+      font-size: 16px;
+      color: #333;
+    }
+
+    .search-button {
+      background-color: #A075C5;
+      border: none;
+      border-radius: 20px;
+      color: #fff;
+      padding: 8px 16px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .search-button:hover {
+      background-color: #784CA2;
+    }
+
+    .blog-link  {
+        color: black;
+    }
+
+    .blog-link :hover{
+        color: gray;
+        
+       
+    }
+
+    a{
+        text-decoration: none;
+    }
+
+    .separator {
+      width: 100%;
+      border: none;
+      height: 1px;
+      background-color: #784CA2;
+      margin: 40px 0;
+    }
+
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Blog post styles */
+    .blog-post {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .blog-post .post-image {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add the box shadow */
+    }
+
+    .blog-post h2 {
+      font-size: 60px;
+      margin: 20px 0;
+    }
+
+    .blog-post p {
+      font-size: 18px;
+    }
+
+    .blog-post h3 {
+      font-size: 18px;
+    }
+
+    .share-button {
+      display: inline-block;
+      background-color: #A075C5;
+      color: #fff;
+      padding: 8px 16px;
+      border-radius: 6px;
+      text-decoration: none;
+      margin-top: 20px;
+    }
+
+    /* Responsive styles */
+    @media (max-width: 600px) {
+      .blog-post {
+        padding: 10px;
+      }
+    }
+
+    /* Navigation arrows */
+    .navigation-arrows {
+      display: flex;
+      justify-content: space-between;
+      margin: 20px 0;
+    }
+
+    .arrow {
+      font-size: 24px;
+      cursor: pointer;
+      color: #333;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <!-- Brand Name -->
+      <a class="navbar-brand" href="index.html">IRA</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Shop</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">TGF</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/pages/blog2.html">Health Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Login/Sign up</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">My Period</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">My Cart</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">My Subscription</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="search-bar-container">
+      <input type="text" class="search-input" placeholder="Search...">
+      <button class="search-button">Search</button>
+    </div>
+  </div>
+
+  <!-- Horizontal Line / Separator -->
+  <hr class="separator">
+  <!-- Navigation Arrows -->
+  <div class="navigation-arrows">
+   
+    <a href="/pages/blogposttwo.html" class="arrow">NEXT ARTICLE →</a>
+  </div>
+</div>
+  <div class="icons">
+      <a href="#"><img src="/img/734386_facebook_media_online_social_icon222.png" alt="Facebook"></a>
+      <a href="#"><img src="/img/instagram2.png" alt="Twitter"></a>
+      <a href="#"><img src="/img/734395_instagram_media_online_photo_social_icontwww.png" alt="Instagram"></a>
+    </div>
+    
+    <div class="blog-post">
+        <!-- Blog Post Subtitle -->
+        <h3>July 31st, 2023<br> 3min read<br> By Sathvika</h3>
+
+    <!-- Blog Post Title -->
+    <h2>Staining Sustainably</h2>
+
+    <!-- Blog Post Image -->
+    <img src="/img/Sustainability-Influencers-in-Canada-1920x1080-1.jpg" alt="Blog Post Image" class="post-image">
+
+    <!-- Horizontal Line / Separator -->
+    <hr class="separator">
+    
+    <!-- Blog Post Paragraph -->
+    <p>
+        Some things possess an unquestionable purpose and essence, bound by the laws of nature. Some things…simply
+        need to happen…like a woman’s monthly menstrual cycle. A process inherent to every regular woman, it comes
+        with its own set of inconveniences and complexities, along with the amazement
+        that the wonders of the human body brings. And the usual pads a woman most likely grew up using aren’t 
+        all as cheery as they seem in those TV ads. Underneath the “perfectly absorbent, extra large, long-winged,
+        leak-protect, cotton comfort” are a few truths that aren’t quite as bright as those bright white pads. 
+        The manufacture and usage of these pads and tampons are now increasingly being seen as what they are 
+        under all those catchphrases - harmful to the earth and harmful to you. Pads are generally non-biodegradable
+        as they’re made of plastics which are derived from a non-renewable source, petroleum. They are neither 
+        recyclable owing to their complex compositions. Their manufacturing process sees the use of chemical 
+        bleaching agents which again, not only release chemicals harmful to the body like dioxins but also pollute
+        the earth. And, as we know, allergic reactions are not uncommon. Scary, right?
+        
+        Do not worry! Because some earth angels are hard at work, trying to replace the plastic-filled market
+        with their gentle, organic and sustainable sanitary napkins. One such brand, IRA, is dedicated to 
+        manufacturing completely chemical-free, organic pads (link to pads) that prioritise the well-being of 
+        both users and the environment. Their tagline, 'Gentle on you, Gentle on earth', perfectly captures 
+        their commitment. These pads are made of pure cotton, sourced sustainably and aren't scented or 
+        processed with chemicals, which means you won't have to worry about any allergies or any harmful reactions.
+        
+        Furthermore, the improper disposal of used sanitary napkins in high population density areas 
+        contributes to the accumulation of non-biodegradable waste in landfills, exacerbating environmental 
+        concerns. The plastic stays there for decades or even centuries resisting the natural cycles of decomposition.
+        By choosing organic pads, we can significantly reduce the amount of non-biodegradable waste we generate, 
+         taking a significant step towards a more sustainable future.
+        
+        When a necessity created to manage something so natural causes harm to nature herself, it isn't a 
+        pretty world. A world where our future generations are NOT going to be subject to the damage we cause 
+        is a pretty one. A world where our waste decomposes along with us is a pretty one. And our brand IRA 
+        is a step that can contribute to that pretty world. Make the conscious choice for a healthier you and 
+        a brighter future by embracing our organic pads and spreading the word!
+    </p>
+    
+    <!-- Share Button -->
+    <!-- <a href="#" class="share-button">Share</a> -->
+  </div>
+
+
+</body>
+
+</html>
+

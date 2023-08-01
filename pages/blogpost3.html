@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IRA BLOG| Home</title>
+  <!-- Add Bootstrap CSS link -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Link to your custom CSS file -->
+  <link rel="stylesheet" href="/css/style.css">
+  <!-- ... (rest of your head section) ... -->
+  <style>
+    /* ... (rest of your existing styles) ... */
+    body {
+    background-color: #fff;
+     }
+    /* Custom style for the navigation bar */
+    .navbar {
+    background-image: linear-gradient(#a075c5, #ffff);
+      padding: 10px;
+      padding: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add the box shadow */
+    }
+
+    .navbar-brand {
+      font-size: 24px;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    .navbar-item {
+      color: #fff;
+    }
+    .navbar-brand,
+    .navbar-nav .nav-link {
+      color: black;
+    }
+
+    .navbar-brand:hover,
+    .navbar-nav .nav-link:hover {
+      color: #8653af;
+    }
+
+    .navbar-item {
+      color: black;
+    }
+
+    
+    
+    .icons {
+        float: left;
+    }
+    .icons img {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+    }
+
+    /* ... (rest of your custom styles) ... */
+    
+
+    .blog-card-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      border-radius: 6px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .blog-card-overlay h2,
+    .blog-card-overlay .read-more-button {
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+    }
+
+    .blog-card-overlay .read-more-button {
+      background-color ;
+      border: none;
+      border-radius: 4px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .blog-card-image:hover .blog-card-overlay {
+      opacity: 1;
+    }
+
+    /* Custom style for the search bar */
+    .search-bar-container {
+      display: flex;
+      align-items: center;
+      max-width: 300px;
+      background-color: #fff;
+      border-radius: 20px;
+      padding: 5px 10px;
+    }
+
+    .search-input {
+      flex: 1;
+      border: none;
+      outline: none;
+      font-size: 16px;
+      color: #333;
+    }
+
+    .search-button {
+      background-color: #A075C5;
+      border: none;
+      border-radius: 20px;
+      color: #fff;
+      padding: 8px 16px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .search-button:hover {
+      background-color: #784CA2;
+    }
+
+    .blog-link  {
+        color: black;
+    }
+
+    .blog-link :hover{
+        color: gray;
+        
+       
+    }
+
+    a{
+        text-decoration: none;
+    }
+
+    .separator {
+      width: 100%;
+      border: none;
+      height: 1px;
+      background-color: #784CA2;
+      margin: 40px 0;
+    }
+
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Blog post styles */
+    .blog-post {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .blog-post .post-image {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add the box shadow */
+    }
+
+    .blog-post h2 {
+      font-size: 60px;
+      margin: 20px 0;
+    }
+
+    .blog-post p {
+      font-size: 18px;
+    }
+
+    .blog-post h3 {
+      font-size: 18px;
+    }
+
+    .share-button {
+      display: inline-block;
+      background-color: #A075C5;
+      color: #fff;
+      padding: 8px 16px;
+      border-radius: 6px;
+      text-decoration: none;
+      margin-top: 20px;
+    }
+
+    /* Responsive styles */
+    @media (max-width: 600px) {
+      .blog-post {
+        padding: 10px;
+      }
+    }
+
+    /* Navigation arrows */
+    .navigation-arrows {
+      display: flex;
+      justify-content: space-between;
+      margin: 20px 0;
+      color: #333;
+    }
+
+    .arrow {
+      font-size: 24px;
+      cursor: pointer;
+      color: #333;
+    }
+  </style>
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <!-- Brand Name -->
+      <a class="navbar-brand" href="index.html">IRA</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Shop</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">TGF</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/pages/blog2.html">Health Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Login/Sign up</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">My Period</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">My Cart</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">My Subscription</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="search-bar-container">
+      <input type="text" class="search-input" placeholder="Search...">
+      <button class="search-button">Search</button>
+    </div>
+  </div>
+
+  <!-- Horizontal Line / Separator -->
+  <hr class="separator">
+  <!-- Navigation Arrows -->
+  <div class="navigation-arrows">
+    <a href="/pages/blogposttwo.html" class="arrow">← PREVIOUS ARTICLE</a>
+    <a href="/pages/blogpost2.html" class="arrow">NEXT ARTICLE →</a>
+  </div>
+</div>
+  <div class="icons">
+      <a href="#"><img src="/img/734386_facebook_media_online_social_icon222.png" alt="Facebook"></a>
+      <a href="#"><img src="/img/instagram2.png" alt="Twitter"></a>
+      <a href="#"><img src="/img/734395_instagram_media_online_photo_social_icontwww.png" alt="Instagram"></a>
+    </div>
+    
+    <div class="blog-post">
+        <!-- Blog Post Subtitle -->
+        <h3>July 31st, 2023<br> 3min read<br> By Sathvika</h3>
+
+    <!-- Blog Post Title -->
+    <h2>Back to Nature: Unveiling the secret benefits of organic pads</h2>
+
+    <!-- Blog Post Image -->
+    <img src="/img/world-environment.jpeg" alt="Blog Post Image" class="post-image">
+
+    <!-- Horizontal Line / Separator -->
+    <hr class="separator">
+    
+    <!-- Blog Post Paragraph -->
+    <p>While half the population of the world bleeds on a monthly basis, it isn’t fair that a few have to resort to old clothes and rags to manage being a woman. It isn’t fair how a few 
+        daughters have to stay home for 3 to 5 days every month, missing school (if they’re lucky enough to go to one), just because they are unaware of how to properly navigate the cycles
+         of nature. And it's simply not fair how young girls are subject to diseases and health problems because they don’t have the proper knowledge or material to deal with such a routine
+          phenomenon. Those of us who do must be grateful to have access to feminine care products so easily and have vital knowledge at our fingertips. But I believe the best way to show gratitude is to pay it forward.
+
+        By working together with organisations like IRA, who manufacture pads that are completely organic and sustainable (link to pads), you would be joining hands with a team committed
+         to reducing the knowledge gap among rural girls and funding their basic feminine hygiene needs. Every time you purchase their sanitary napkins you are ensuring that an underprivileged
+          woman has a manageable and healthy period. 5% of the company’s profits made will go directly to helping impoverished families. IRA was formed with a dedication toward increasing 
+          awareness and knowledge about periods and decreasing the negative environmental impact of conventional sanitary napkins. Every time you purchase a sanitary pad box, IRA ensures
+           that a woman who doesn’t have access to her necessities is provided with one box too. Making the conscious decision to opt for products like these is not only advantageous for
+            your well-being, but is also uplifting a disempowered woman and destigmatising a basic phenomenon of female physiology. What’s better than helping two people with one personal
+             choice of yours?
+        
+        The empowerment of women now also lies in the simple deed of the purchase of a box of sanitary napkins and the ripple effect it has. By choosing these products you are choosing 
+        the enablement of women across different communities. You are breaking down barriers, promoting education & awareness and ensuring a future where women can unlock their full potential
+         while also making sure that she and her family have a green earth to live in to make her achievements possible. Come on now then! Let’s create a brighter and more inclusive future!</p>

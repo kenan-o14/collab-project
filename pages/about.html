@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IRA Blog</title>
+    <!-- Add Bootstrap CSS link -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Link to your custom CSS file -->
+    <link rel="stylesheet" href="/styles.css">
+  <!-- ... (rest of your head section) ... -->
+  <style>
+    /* ... (rest of your existing styles) ... */
+body {
+  
+}
+    /* Custom style for the navigation bar */
+    .navbar {
+      padding: 10px;
+      background-image: linear-gradient(#a075c5, #ffff);
+      box-shadow: 0 0px 4px rgba(0, 0, 0, 0.2); /* Add the box shadow */
+    
+    }
+
+    .navbar-brand {
+      font-size: 24px;
+      font-weight: bold;
+      color: #fff;
+      font-family: 'courier new', monospace;
+    }
+    .navbar-brand,
+    .navbar-nav .nav-link {
+      color: black;
+    }
+
+    .navbar-brand:hover,
+    .navbar-nav .nav-link:hover {
+      color: #8653af;
+    }
+
+    .navbar-item {
+      color: black;
+    }
+
+    /* Custom style for different sections */
+    .section {
+      padding: 40px 0;
+    }
+
+    .section-title {
+      font-size: 28px;
+      font-weight: bold;
+      color: #0B1152;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .section-subtitle {
+      font-size: 18px;
+      color: #A075C5;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .section-content {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: justify;
+      padding: 10px;
+      border-radius: 10px;
+      background-image: linear-gradient(#a075c5, #ffff);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add the box shadow */
+    }
+
+    .section-image {
+      display: block;
+      max-width: 100%;
+      margin: 0 auto;
+    }
+
+    /* Custom style for the navigation bar */
+     /* Custom style for the footer */
+     footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .footer-section {
+      margin-bottom: 20px;
+    }
+
+    .footer-section h4 {
+      color: #fff;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .footer-section p {
+      color: #ccc;
+      margin: 0;
+    }
+
+    .footer-icons {
+      margin-top: 15px;
+    }
+
+    .footer-icons a {
+      display: inline-block;
+      margin-right: 10px;
+    }
+
+    .footer-icons img {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+    }
+
+    /* Custom style for the footer bottom */
+    .footer-bottom {
+      margin-top: 40px;
+      width: 100%;
+    }
+
+    .footer-bottom p {
+      margin: 0;
+    }
+
+
+    .title-container {
+  text-align: center;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  font-size: 14px;
+}
+
+/* Add gaps between navigation items */
+.navbar-nav .nav-item {
+  margin-right: 47px;
+}
+
+/* To remove the margin after the last navigation item */
+.navbar-nav .nav-item:last-child {
+  margin-right: 0;
+}
+    /* ... (rest of your custom styles) ... */
+  </style>
+</head>
+
+<body>
+   <!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <!-- Brand Name -->
+      <a class="navbar-brand" href="index.html">IRA</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Shop</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">TGF</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="blog.html">Health Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/pages/login.html">Login/Sign up</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">My Period</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">My Cart</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">My Subscription</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- About Section 1 -->
+  <div class="section">
+    <div class="container">
+      <h2 class="section-title">Our Company</h2>
+      <div class="section-subtitle">Healthy Body, Healthy Planet</div>
+      <div class="section-content">
+        <p>Here, menstrual care meets compassion. We are not just a brand; we are a movement dedicated to revolutionizing the way women experience their periods
+           while making a positive impact on the world. IRA takes a firm commitment to challenge every ignorant thought and foster an inclusive space for vibrant
+            conversations on menstrual hygiene.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- About Section 2 -->
+  <div class="section">
+    <div class="container">
+      <h2 class="section-title">Our Mission</h2>
+      <div class="section-subtitle">Making the World a Healthier Place</div>
+      <div class="section-content">
+        <p>At IRA, our mission is twofold - to provide women with the highest quality organic sanitary products that promote health and well-being, and to create a better future for all through our
+           charitable initiatives. We believe that every woman deserves access to safe and eco-friendly menstrual solutions, and we are committed to making a difference in the lives of those in need</p>
+        
+      </div>
+    </div>
+  </div>
+
+  <!-- About Section 3 -->
+  <div class="section">
+    <div class="container">
+      <h2 class="section-title">Our special stakeholders</h2>
+      <div class="section-subtitle">Leading a Sustainable Future</div>
+      <div class="section-content">
+        <p>IRA values its customers and its partners, but there are a special few stakeholders we do not forget to value. We take our responsibility
+           to the environment seriously. That's why all our products are crafted with love and care, using organic and biodegradable materials that 
+           are gentle on both your body and the planet.</p>
+        
+      </div>
+    </div>
+  </div>
+
+  <!-- ...
